@@ -85,7 +85,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-MEDIA_ROOT = BASE_DIR / 'static/images'
+MEDIA_ROOT = BASE_DIR / 'staticfiles/images'
 
 django_on_heroku.settings(locals())
 # django_on_heroku.settings(locals(), staticfiles=False)
