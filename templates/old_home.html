@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} | home {% endblock %}
+
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<h3>Hi, {{user.username}}</h3>
+
+{% else %}
+
+<h3>You're logged out!</h3>
+
+{% endif %}
+
+<h3>There are {{ room_count }} rooms</h3>
+
+
+
+<form action="{% url 'home' %}">
+    search: <input type="text" name="q" placeholder="Search Rooms...">
+</form>
+
+<br>
+
+<a href="{% url 'create-room' %}">
+    <button>Create Room</button>
+</a>
+
+<br>
+
+
+<!-- FEED -->
+<div id="feed">
+
+    <div>
+        {% include 'rooms/topics_component.html' %}
+    </div>
+
+    <div>
+        {% include 'rooms/rooms_component.html' %}
+    </div>
+    
+    <div>
+        {% include 'rooms/messages_component.html' %}
+    </div>
+    
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>User profile</h2>
+<h3> {{user.username}} </h3>
+
+<h2>About</h2>
+<h3>...</h3>
+
+
+<div id="feed">
+
+    <div>
+        {% include 'rooms/topics_component.html' %}
+    </div>
+    
+    <div>
+        {% include 'rooms/rooms_component.html' %}
+    </div>
+    
+    <div>
+        {% include 'rooms/messages_component.html' %}
+    </div>
+    
+
+</div>
+
+
+{% endblock %}
