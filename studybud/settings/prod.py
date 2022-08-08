@@ -72,7 +72,7 @@ LOGGING = {
     }
 }
 
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
@@ -85,7 +85,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-MEDIA_ROOT = BASE_DIR / 'staticfiles/images'
+MEDIA_ROOT = BASE_DIR / 'static/images'
 
 django_on_heroku.settings(locals())
 # django_on_heroku.settings(locals(), staticfiles=False)
