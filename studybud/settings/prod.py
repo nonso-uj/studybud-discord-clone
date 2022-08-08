@@ -72,13 +72,13 @@ LOGGING = {
     }
 }
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-STATIC_URL = '/staticfiles/'
-MEDIA_URL = '/staticfiles/images/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/static/images/'
 
 
 STATICFILES_DIRS = [
