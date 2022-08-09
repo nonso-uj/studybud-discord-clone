@@ -8,6 +8,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = False
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -21,8 +22,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
 
-    # stop collect static in dev
-    "whitenoise.runserver_nostatic",
+    # collectstatic in dev
+    # "whitenoise.runserver_nostatic",
 
     'django.contrib.staticfiles',
 
@@ -41,6 +42,13 @@ INSTALLED_APPS = [
 # Static files (CSS, JavaScript, Images)
 # # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# STATIC_ROOT = BASE_DIR / "staticfiles"
+
+
+
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
@@ -51,4 +59,5 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
