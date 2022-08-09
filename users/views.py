@@ -12,6 +12,8 @@ from .forms import CustomUserCreationForm, UpdateProfileForm, UserEditForm
 
 
 def user_login(request):
+    if request.user.is_authenticated == True:
+        return redirect('home')
     if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
@@ -28,6 +30,8 @@ def user_login(request):
 
 
 def user_register(request):
+    if request.user.is_authenticated == True:
+        return redirect('home')
     form = CustomUserCreationForm()
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
@@ -52,6 +56,8 @@ def user_register(request):
 
 
 def user_edit(request):
+    if request.user.is_authenticated == False:
+        return redirect('home')
     form = UserEditForm(instance=request.user)
     if request.method == 'POST':
         form = UserEditForm(request.POST, instance=request.user)

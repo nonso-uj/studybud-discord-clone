@@ -11,6 +11,7 @@
             All <span>{{ room_count }}</span>
         </a>
       </li>
+      {% if topics %}
 
       {% for topic in topics %}
 
@@ -30,4 +31,6 @@
         <path d="M16 21l-13-13h-3l16 16 16-16h-3l-13 13z"></path>
       </svg>
     </a>
+
+    {% endif %}
   </div>

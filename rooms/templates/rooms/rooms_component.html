@@ -2,6 +2,7 @@
 
 
 <div class="roomListRoom">
+    {% if rooms %}
     {% for room in rooms %}
 
         <div class="roomListRoom__header">
@@ -76,4 +77,6 @@
                 {% endif %}
             </span>
         </div>
+
+    {% endif %}
 </div>

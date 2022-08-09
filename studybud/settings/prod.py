@@ -80,7 +80,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = '/static/'
 MEDIA_URL = '/static/images/'
 
-
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
