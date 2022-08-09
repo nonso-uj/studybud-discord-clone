@@ -81,11 +81,11 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/static/images/'
 
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'static',
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
-# MEDIA_ROOT = BASE_DIR / 'staticfiles/images'
+MEDIA_ROOT = BASE_DIR / 'staticfiles/images'
 
 django_on_heroku.settings(locals())
 # django_on_heroku.settings(locals(), staticfiles=False)
