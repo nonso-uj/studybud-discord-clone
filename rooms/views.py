@@ -41,8 +41,8 @@ def room(request, pk):
 
         if request.POST['msg'] != '' or request.POST['msg'] != None:
             Message.objects.create(
-                content = request.POST['msg'],
                 user = request.user,
+                content = request.POST['msg'],
                 chatroom = room
                 )
             room.participants.add(request.user)
