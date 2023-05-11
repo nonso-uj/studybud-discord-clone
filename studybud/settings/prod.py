@@ -14,7 +14,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     # change
-    'studybud-discord-clone.onrender.com',
+    # 'studybud-discord-clone.onrender.com',
+    '*',
 ]
 
 
@@ -64,9 +65,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # AWS_LOCATION = 'static'
 
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
 
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'

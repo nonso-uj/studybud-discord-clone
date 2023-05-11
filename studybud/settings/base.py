@@ -35,7 +35,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 
 load_dotenv(find_dotenv())
 
-DATABASES = {'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600)}
+DATABASES = {'default': dj_database_url.parse(config('DATABASE_URL'))}
 
 
 # DATABASES = {
