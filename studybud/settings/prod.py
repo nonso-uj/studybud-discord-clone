@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
 # STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # STATIC_URL = '/static/'
 # MEDIA_URL = '/static/images/'
