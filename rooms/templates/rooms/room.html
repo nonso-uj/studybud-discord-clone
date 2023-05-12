@@ -78,7 +78,7 @@
                 <p>Hosted By</p>
                 <a href="{% url 'profile' room.host.id %}" class="room__author">
                   <div class="avatar avatar--small">
-                    <img src="{{room.host.profile.profile_pic.url}}" />
+                    <img src="{% static 'assets/avatar.svg' %}" />
                   </div>
                   <span>@{{ room.host.first_name }}</span>
                 </a>
@@ -99,7 +99,7 @@
                     <div class="thread__author">
                       <a href="{% url 'profile' msg.user.id %}" class="thread__authorInfo">
                         <div class="avatar avatar--small">
-                          <img src="{{msg.user.profile.profile_pic.url}}" />
+                          <img src="{% static 'assets/avatar.svg' %}" />
                         </div>
                         <span>@{{ msg.user.first_name }}</span>
                       </a>
